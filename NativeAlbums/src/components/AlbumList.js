@@ -8,7 +8,7 @@ class AlbumList extends Component {
 		albums: []
 	}
 
-	async componentWillMount() {
+	async componentDidMount() {
 		const response = await axios.get('https://rallycoding.herokuapp.com/api/music_albums');
 		this.setState({ albums: response.data });
 	}
